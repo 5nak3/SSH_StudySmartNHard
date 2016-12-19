@@ -1,6 +1,7 @@
-﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="SSH_ASPJ.Account.Register" %>
+﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentRegister.aspx.cs" Inherits="SSH_ASPJ.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <br />
     <h2><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
@@ -26,8 +27,29 @@
                     CssClass="text-danger" ErrorMessage="The username field is required" />
             </div>
         </div>
-        <div>
-          <!--  <asp:Label runat="server" AssociatedControlID="" -->
+        <div class="form-group">
+          <asp:Label runat="server" AssociatedControlID="fullName" CssClass="col-md-2 control-label">Full Name</asp:Label>
+          <div class="col-md-10">
+              <asp:TextBox runat="server" ID="fullName" CssClass="form-control" TextMode="SingleLine" />
+              <asp:RequiredFieldValidator runat="server" ControlToValidate="fullName"
+                    CssClass="text-danger" ErrorMessage="The Full Name field is required" />
+          </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="userInstitution" CssClass="col-md-2 control-label">Your Institution</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="userInstitution" CssClass="form-control" TextMode="SingleLine" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="userInstitution"
+                    CssClass="text-danger" ErrorMessage="The Instution field is required" />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="userPhoneNumber" CssClass="col-md-2 control-label">Your Phone Number</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="userPhoneNumber" CssClass="form-control" TextMode="Phone" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="userPhoneNumber"
+                    CssClass="text-danger" ErrorMessage="The Phone Number field is required" />
+            </div>
         </div>
         <!--
         <div class="form-group">
@@ -48,11 +70,12 @@
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
             </div>
         </div>
+            -->
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>
-            -->
+            
     </div>
 </asp:Content>

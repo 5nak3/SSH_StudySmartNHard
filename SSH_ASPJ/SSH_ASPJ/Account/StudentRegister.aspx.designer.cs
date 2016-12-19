@@ -40,6 +40,33 @@ namespace SSH_ASPJ.Account {
         protected global::System.Web.UI.WebControls.TextBox Username;
         
         /// <summary>
+        /// fullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fullName;
+        
+        /// <summary>
+        /// userInstitution control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox userInstitution;
+        
+        /// <summary>
+        /// userPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox userPhoneNumber;
+        
+        /// <summary>
         /// Password control.
         /// </summary>
         /// <remarks>
