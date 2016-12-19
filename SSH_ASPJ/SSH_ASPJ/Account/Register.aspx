@@ -19,6 +19,18 @@
             </div>
         </div>
         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Username" CssClass="col-md-2 control-label">Username</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="Username" CssClass="form-control" TextMode="SingleLine" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="Username"
+                    CssClass="text-danger" ErrorMessage="The username field is required" />
+            </div>
+        </div>
+        <div>
+            <asp:Label runat="server" AssociatedControlID=""
+        </div>
+        <!--
+        <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
@@ -41,5 +53,6 @@
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>
+            -->
     </div>
 </asp:Content>
