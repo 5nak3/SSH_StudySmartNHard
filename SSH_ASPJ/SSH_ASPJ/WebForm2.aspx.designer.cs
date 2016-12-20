@@ -7,45 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SSH_ASPJ.Account {
+namespace ASPJ {
     
     
-    public partial class Register {
+    public partial class WebForm2 {
         
         /// <summary>
-        /// ErrorMessage control.
+        /// testLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ErrorMessage;
+        protected global::System.Web.UI.WebControls.Label testLabel;
         
         /// <summary>
-        /// Email control.
+        /// friendList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
+        protected global::System.Web.UI.WebControls.BulletedList friendList;
         
         /// <summary>
-        /// Password control.
+        /// searchFriendBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.TextBox searchFriendBox;
         
         /// <summary>
-        /// ConfirmPassword control.
+        /// addFriend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        protected global::System.Web.UI.WebControls.Button addFriend;
+        
+        /// <summary>
+        /// add_result control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label add_result;
+        
+        /// <summary>
+        /// Notification control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.BulletedList Notification;
     }
 }
