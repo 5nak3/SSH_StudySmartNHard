@@ -26,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Imagin", "..\..\..\..\Docum
 		SlnRelativePath = "..\..\..\..\Documents\Visual Studio 2015\Projects\Imagin\Imagin\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagin", "..\..\..\..\Documents\Visual Studio 2015\Projects\Imagin\Imagin\Imagin.csproj", "{0F41DBCF-F749-4711-BDD3-902CCF6CE0E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{E3580EAF-55E9-4326-9E66-6AEE91326C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3580EAF-55E9-4326-9E66-6AEE91326C88}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{E3580EAF-55E9-4326-9E66-6AEE91326C88}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0F41DBCF-F749-4711-BDD3-902CCF6CE0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F41DBCF-F749-4711-BDD3-902CCF6CE0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F41DBCF-F749-4711-BDD3-902CCF6CE0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F41DBCF-F749-4711-BDD3-902CCF6CE0E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
