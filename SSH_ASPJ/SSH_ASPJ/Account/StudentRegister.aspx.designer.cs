@@ -67,6 +67,24 @@ namespace SSH_ASPJ.Account {
         protected global::System.Web.UI.WebControls.TextBox userPhoneNumber;
         
         /// <summary>
+        /// userFOI control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList userFOI;
+        
+        /// <summary>
+        /// userDesignation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox userDesignation;
+        
+        /// <summary>
         /// Password control.
         /// </summary>
         /// <remarks>

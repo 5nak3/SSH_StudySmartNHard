@@ -51,6 +51,25 @@
                     CssClass="text-danger" ErrorMessage="The Phone Number field is required" />
             </div>
         </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="userFOI" CssClass="col-md-2 control-label">Your Field of Industry</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="userFOI" runat="server" CssClass="ddl"  Width="120px" BackColor="#F6F1DB" ForeColor="#7d6754" Font-Names="Andalus" AutoPostBack="true">
+                    <asp:ListItem Text="=SELECT=" Value="SELECT"></asp:ListItem>
+                    <asp:ListItem Text="Information Technology" Value="IT"></asp:ListItem> 
+                    <asp:ListItem Text="Business" Value="Business"></asp:ListItem>
+                    <asp:ListItem Text="Interactive & Digital Media" Value="IDM"></asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="userDesignation" CssClass="col-md-2 control-label">Your Designation</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="userDesignation" CssClass="form-control" TextMode="SingleLine" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="userPhoneNumber"
+                    CssClass="text-danger" ErrorMessage="The Designation field is required" />
+            </div> 
+        </div>
         <!--
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
@@ -76,6 +95,6 @@
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>
-            
+          <br />  
     </div>
 </asp:Content>
