@@ -76,6 +76,24 @@ namespace SSH_ASPJ.Account {
         protected global::System.Web.UI.WebControls.DropDownList userFOI;
         
         /// <summary>
+        /// PasswordSelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList PasswordSelection;
+        
+        /// <summary>
+        /// textPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl textPassword;
+        
+        /// <summary>
         /// Password control.
         /// </summary>
         /// <remarks>

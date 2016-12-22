@@ -205,7 +205,8 @@
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\MentorRegistration.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
-    <Content Include="Account\StudentRegister.aspx" />
+    <Content Include="Account\RegistrationSelection.aspx" />
+    <Content Include="Account\MenteeRegister.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
@@ -221,6 +222,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Images\introductions_800_clr_10909-1.png" />
+    <Content Include="Images\user_mentee_med.jpg" />
     <Content Include="Scripts\ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -349,12 +352,19 @@
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Account\StudentRegister.aspx.cs">
-      <DependentUpon>StudentRegister.aspx</DependentUpon>
+    <Compile Include="Account\RegistrationSelection.aspx.cs">
+      <DependentUpon>RegistrationSelection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\StudentRegister.aspx.designer.cs">
-      <DependentUpon>StudentRegister.aspx</DependentUpon>
+    <Compile Include="Account\RegistrationSelection.aspx.designer.cs">
+      <DependentUpon>RegistrationSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\MenteeRegister.aspx.cs">
+      <DependentUpon>MenteeRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\MenteeRegister.aspx.designer.cs">
+      <DependentUpon>MenteeRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\RegisterExternalLogin.aspx.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>

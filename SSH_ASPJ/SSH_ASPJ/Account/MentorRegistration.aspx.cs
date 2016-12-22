@@ -35,5 +35,14 @@ namespace SSH_ASPJ.Account
             //    ErrorMessage.Text = result.Errors.FirstOrDefault();
             //}
         }
+
+        protected void PasswordSelection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.PasswordSelection.SelectedValue == "1")
+                this.textPassword.Visible = true;
+            else if (this.PasswordSelection.SelectedValue == "2")
+                this.textPassword.Visible = false;
+
+        }
     }
 }

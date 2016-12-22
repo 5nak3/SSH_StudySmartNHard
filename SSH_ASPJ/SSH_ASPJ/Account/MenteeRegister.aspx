@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StudentRegister.aspx.cs" Inherits="SSH_ASPJ.Account.Register" %>
+﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MenteeRegister.aspx.cs" Inherits="SSH_ASPJ.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <br />
@@ -55,11 +55,13 @@
             <asp:Label runat="server" AssociatedControlID="userFOI" CssClass="col-md-2 control-label">Your Field of Industry</asp:Label>
             <div class="col-md-10">
                 <asp:DropDownList ID="userFOI" runat="server" CssClass="ddl" BackColor="#F6F1DB" ForeColor="#7d6754" Font-Names="Andalus" AutoPostBack="true">
-                    <asp:ListItem Text="=SELECT=" Value="SELECT"></asp:ListItem>
+                    <asp:ListItem Text="SELECT" Value="SELECT"></asp:ListItem>
                     <asp:ListItem Text="Information Technology" Value="IT"></asp:ListItem> 
                     <asp:ListItem Text="Business" Value="Business"></asp:ListItem>
                     <asp:ListItem Text="Interactive & Digital Media" Value="IDM"></asp:ListItem>
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="userFOI"
+                    CssClass="text-danger" InitialValue="SELECT" ErrorMessage="The Field of Industry field is required" />
             </div>
         </div>
        <%-- <div class="form-group">
@@ -70,7 +72,20 @@
                     CssClass="text-danger" ErrorMessage="The Designation field is required" />
             </div> 
         </div>--%>
-        <!--
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="PasswordSelection" CssClass="col-md-2 control-label">Type of Password</asp:Label>
+            <div class="col-md-10">
+               <asp:RadioButtonList ID="PasswordSelection" runat="server" AutoPostBack="true" OnSelectedIndexChanged="PasswordSelection_SelectedIndexChanged">    
+                   <asp:ListItem Text="I want text as a Password" Value="1"></asp:ListItem>
+                         <asp:ListItem Text="I want an image as my Password" Value="2"></asp:ListItem>
+                </asp:RadioButtonList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="PasswordSelection"
+                    CssClass="text-danger" ErrorMessage="This is required to choose a selection"/>
+            </div>
+        </div>
+
+        <div id="textPassword" runat="server" visible="false">
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
             <div class="col-md-10">
@@ -89,7 +104,8 @@
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
             </div>
         </div>
-            -->
+        </div>
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />

@@ -64,6 +64,8 @@
                     <asp:ListItem Text="Business" Value="Business"></asp:ListItem>
                     <asp:ListItem Text="Interactive & Digital Media" Value="IDM"></asp:ListItem>
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="MentorFOI"
+                    CssClass="text-danger" InitialValue="SELECT" ErrorMessage="The Field of Industry field is required" />
             </div>
         </div>
 
@@ -75,6 +77,40 @@
                     CssClass="text-danger" ErrorMessage="The Designation field is required" />
             </div> 
         </div>
+
+         <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="PasswordSelection" CssClass="col-md-2 control-label">Type of Password</asp:Label>
+            <div class="col-md-10">
+               <asp:RadioButtonList ID="PasswordSelection" runat="server" AutoPostBack="true" OnSelectedIndexChanged="PasswordSelection_SelectedIndexChanged">    
+                   <asp:ListItem Text="I want text as a Password" Value="1"></asp:ListItem>
+                         <asp:ListItem Text="I want an image as my Password" Value="2"></asp:ListItem>
+                </asp:RadioButtonList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="PasswordSelection"
+                    CssClass="text-danger" ErrorMessage="This is required to choose a selection"/>
+            </div>
+        </div>
+
+        <div id="textPassword" runat="server" visible="false">
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="MentorPassword" CssClass="col-md-2 control-label">Password</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="MentorPassword" TextMode="Password" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="MentorPassword"
+                    CssClass="text-danger" ErrorMessage="The password field is required." />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirm password</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
+                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
+                <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
+                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
+            </div>
+        </div>
+        </div>
+
          <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
