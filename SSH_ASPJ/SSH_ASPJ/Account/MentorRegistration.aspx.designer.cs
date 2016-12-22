@@ -10,7 +10,7 @@
 namespace SSH_ASPJ.Account {
     
     
-    public partial class Register {
+    public partial class MentorRegistration {
         
         /// <summary>
         /// ErrorMessage control.
@@ -22,75 +22,66 @@ namespace SSH_ASPJ.Account {
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// Email control.
+        /// MentorEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
+        protected global::System.Web.UI.WebControls.TextBox MentorEmail;
         
         /// <summary>
-        /// Username control.
+        /// mentorUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Username;
+        protected global::System.Web.UI.WebControls.TextBox mentorUsername;
         
         /// <summary>
-        /// fullName control.
+        /// mentorFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fullName;
+        protected global::System.Web.UI.WebControls.TextBox mentorFullName;
         
         /// <summary>
-        /// userInstitution control.
+        /// MentorInstitution control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userInstitution;
+        protected global::System.Web.UI.WebControls.TextBox MentorInstitution;
         
         /// <summary>
-        /// userPhoneNumber control.
+        /// MentorPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userPhoneNumber;
+        protected global::System.Web.UI.WebControls.TextBox MentorPhoneNumber;
         
         /// <summary>
-        /// userFOI control.
+        /// MentorFOI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList userFOI;
+        protected global::System.Web.UI.WebControls.DropDownList MentorFOI;
         
         /// <summary>
-        /// Password control.
+        /// MentorDesignation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
-        
-        /// <summary>
-        /// ConfirmPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        protected global::System.Web.UI.WebControls.TextBox MentorDesignation;
     }
 }
