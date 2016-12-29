@@ -1,19 +1,13 @@
-﻿
+﻿using Microsoft.AspNet.Identity.Owin;
+using SSH_ASPJ.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using SSH_ASPJ.Models;
-
 
 namespace SSH_ASPJ.Account
 {
     public partial class MentorRegistration : Page
     {
-
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -42,7 +36,6 @@ namespace SSH_ASPJ.Account
                 this.textPassword.Visible = true;
             else if (this.PasswordSelection.SelectedValue == "2")
                 this.textPassword.Visible = false;
-
         }
     }
 }

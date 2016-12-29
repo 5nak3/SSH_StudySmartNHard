@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Boared.aspx.cs" Inherits="Imagin.Boared" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         /* Some CSS styling */
@@ -30,10 +31,10 @@
     <div id="sketchpadapp">
         <div class="rightside">
             <input type="submit"
-                   value="Clear Canvas" id="clear_button" />
+                value="Clear Canvas" id="clear_button" />
             <br />
             <canvas id="sketchpad" height="300"
-                    width="400"></canvas>
+                width="400"></canvas>
         </div>
     </div>
     <title>SignalR Sketchpad</title>
@@ -70,7 +71,7 @@
                 // Let's use black by setting RGB values to 0, and 255 alpha (completely opaque)
                 r = 0; g = 0; b = 0; a = 255;
                 // Select a fill style
-                
+
                 // Draw a filled circle
                 ctx.beginPath();
                 ctx.arc(x, y, size, 0, Math.PI * 2, true);
@@ -138,7 +139,5 @@
                 }
             }
         })
-        
     </script>
-
 </asp:Content>

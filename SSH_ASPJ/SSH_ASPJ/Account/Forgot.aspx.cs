@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using SSH_ASPJ.Models;
+using System;
 using System.Web;
 using System.Web.UI;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Owin;
-using SSH_ASPJ.Models;
 
 namespace SSH_ASPJ.Account
 {

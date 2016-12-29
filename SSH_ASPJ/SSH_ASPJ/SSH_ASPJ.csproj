@@ -213,6 +213,47 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Boared.aspx" />
+    <Content Include="BootStrap_Temp_Content\css\1-col-portfolio.css" />
+    <Content Include="BootStrap_Temp_Content\css\bootstrap.css" />
+    <Content Include="BootStrap_Temp_Content\css\bootstrap.min.css" />
+    <Content Include="BootStrap_Temp_Content\css\jquery.smartmenus.bootstrap.css" />
+    <Content Include="BootStrap_Temp_Content\css\owl\owl.carousel.css" />
+    <Content Include="BootStrap_Temp_Content\css\owl\owl.carousel.js" />
+    <Content Include="BootStrap_Temp_Content\css\owl\owl.theme.css" />
+    <Content Include="BootStrap_Temp_Content\css\owl\owl.transitions.css" />
+    <Content Include="BootStrap_Temp_Content\fonts\font-awesome.min.css" />
+    <Content Include="BootStrap_Temp_Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="BootStrap_Temp_Content\img\12.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\13.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\14.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\15.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\2.png" />
+    <Content Include="BootStrap_Temp_Content\img\22.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\700x300.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\agsquare_%402X.png" />
+    <Content Include="BootStrap_Temp_Content\img\banner.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\item01.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\item02.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\item03.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\logo.png" />
+    <Content Include="BootStrap_Temp_Content\img\portfolio\item01.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\portfolio\item02.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\portfolio\item03.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\portfolio\item04.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\portfolio\item05.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\portfolio\item06.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\products\1.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\products\2.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\products\3.jpg" />
+    <Content Include="BootStrap_Temp_Content\img\triangular_%402X.png" />
+    <Content Include="BootStrap_Temp_Content\js\bootstrap.js" />
+    <Content Include="BootStrap_Temp_Content\js\bootstrap.min.js" />
+    <Content Include="BootStrap_Temp_Content\js\jquery.js" />
+    <Content Include="BootStrap_Temp_Content\js\jquery.smartmenus.bootstrap.js" />
+    <Content Include="BootStrap_Temp_Content\js\jquery.smartmenus.js" />
+    <Content Include="BootStrap_Temp_Content\js\tutorial.js" />
+    <Content Include="BootStrap_Temp_Content\js\wow.min.js" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -224,11 +265,22 @@
     <Content Include="Account\Web.config" />
     <Content Include="Images\introductions_800_clr_10909-1.png" />
     <Content Include="Images\user_mentee_med.jpg" />
+    <Content Include="index.aspx" />
     <Content Include="Scripts\ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="searchFriend.asmx" />
     <Content Include="WebForm2.aspx" />
+    <Content Include="BeforeLogin.Master" />
+    <Content Include="BootStrap_Temp_Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="BootStrap_Temp_Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="BootStrap_Temp_Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="BootStrap_Temp_Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="BootStrap_Temp_Content\fonts\FontAwesome.otf" />
+    <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -412,6 +464,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BeforeLogin.Master.cs">
+      <DependentUpon>BeforeLogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeforeLogin.Master.designer.cs">
+      <DependentUpon>BeforeLogin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Boared.aspx.cs">
       <DependentUpon>Boared.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -433,6 +492,13 @@
     <Compile Include="DrawDot.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="MyUserIdProvider.cs" />
