@@ -35,9 +35,15 @@ namespace SSH_ASPJ.Account
         protected void PasswordSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.PasswordSelection.SelectedValue == "1")
+            {
                 this.textPassword.Visible = true;
+                this.imagePassword.Visible = false;
+            }
             else if (this.PasswordSelection.SelectedValue == "2")
+            {
                 this.textPassword.Visible = false;
+                this.imagePassword.Visible = true;
+            }
         }
     }
 }

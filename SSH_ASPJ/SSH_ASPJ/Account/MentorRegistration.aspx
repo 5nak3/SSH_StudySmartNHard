@@ -106,8 +106,18 @@
                     <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
-                    <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
+                    <asp:CompareValidator runat="server" ControlToCompare="MentorPassword" ControlToValidate="ConfirmPassword"
                         CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
+                </div>
+            </div>
+        </div>
+          <div id="imagePassword" runat="server" visible="false">
+            <div class="form-group">
+                <asp:Label runat="server" AssociatedControlID="imagePasswordControl" CssClass="col-md-2 control-label">Please choose an image</asp:Label>
+                <div class="col-md-10">
+                  <asp:FileUpload runat="server" id="imagePasswordControl" />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="imagePasswordControl"
+                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The image field is required." />
                 </div>
             </div>
         </div>

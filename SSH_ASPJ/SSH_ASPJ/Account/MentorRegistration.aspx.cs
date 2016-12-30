@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.Owin;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using SSH_ASPJ.Models;
 using System;
 using System.Web;
@@ -13,7 +14,7 @@ namespace SSH_ASPJ.Account
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = mentorUsername.Text, Email = MentorEmail.Text };
-            //IdentityResult result = manager.Create(user, Password.Text);
+            IdentityResult result = manager.Create(user, MentorPassword.Text);
             //if (result.Succeeded)
             //{
             //    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
@@ -33,9 +34,15 @@ namespace SSH_ASPJ.Account
         protected void PasswordSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.PasswordSelection.SelectedValue == "1")
+            {
                 this.textPassword.Visible = true;
+                this.imagePassword.Visible = false;
+            }
             else if (this.PasswordSelection.SelectedValue == "2")
+            {
                 this.textPassword.Visible = false;
+                this.imagePassword.Visible = true;
+            }
         }
     }
 }

@@ -24,6 +24,18 @@
                                 CssClass="text-danger" ErrorMessage="The email field is required." />
                         </div>
                     </div>
+                     <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="PasswordSelection" CssClass="col-md-2 control-label">Type of Password</asp:Label>
+            <div class="col-md-10">
+                <asp:RadioButtonList ID="PasswordSelection" runat="server" AutoPostBack="true" OnSelectedIndexChanged="PasswordSelection_SelectedIndexChanged">
+                    <asp:ListItem Text="Text Password" Value="1"></asp:ListItem>
+                    <asp:ListItem Text="Image Password" Value="2"></asp:ListItem>
+                </asp:RadioButtonList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="PasswordSelection"
+                    CssClass="text-danger" ErrorMessage="This is required to choose a selection" />
+            </div>
+        </div>
+                    <div id="textPassword" runat="server" visible="false">
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
                         <div class="col-md-10">
@@ -31,6 +43,18 @@
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
                         </div>
                     </div>
+                        </div>
+                      <div id="imagePassword" runat="server" visible="false">
+            <div class="form-group">
+                <asp:Label runat="server" AssociatedControlID="imagePasswordControl" CssClass="col-md-2 control-label">Please choose an image</asp:Label>
+                <div class="col-md-10">
+                  <asp:FileUpload runat="server" id="imagePasswordControl" />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="imagePasswordControl"
+                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The image field is required." />
+                </div>
+            </div>
+        </div>
+
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                             <div class="checkbox">
@@ -46,7 +70,7 @@
                     </div>
                 </div>
                 <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>
+                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Enabled">Register as a new user</asp:HyperLink>
                 </p>
                 <p>
                     <%-- Enable this once you have account confirmation enabled for password reset functionality
