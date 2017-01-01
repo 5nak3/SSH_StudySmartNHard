@@ -9,6 +9,8 @@ namespace SSH_ASPJ.Account
 {
     public partial class MentorRegistration : Page
     {
+        //https://www.asp.net/identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project
+       // https://www.codeproject.com/Articles/751897/ASP-NET-Identity-with-webforms
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();

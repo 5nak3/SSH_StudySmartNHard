@@ -5,6 +5,19 @@ using System.Web.UI;
 
 namespace SSH_ASPJ.Account
 {
+    //https://www.codeproject.com/articles/8467/simple-asp-net-session-management-framework
+    //https://weblogs.asp.net/anasghanem/programmatically-changing-the-session-id
+    //http://stackoverflow.com/questions/11987579/how-to-generate-a-new-session-id
+    //https://www.codeproject.com/Articles/331962/A-Beginner-s-Tutorial-on-ASP-NET-State-Management
+    //https://www.codeproject.com/articles/32545/exploring-session-in-asp-net
+    //  https://msdn.microsoft.com/en-us/library/tw292whz(v=vs.100).aspx Managing Users by using membership
+    //http://stackoverflow.com/questions/15199415/how-to-create-session-in-asp-net-c-sharp-login-and-registration-memberprofile-p
+    //http://www.c-sharpcorner.com/UploadFile/009464/how-to-make-a-login-form-using-session-in-Asp-Net-C-Sharp/
+    //http://stackoverflow.com/questions/6409170/how-to-implement-login-session-in-asp-net-and-c-sharp
+    //http://stackoverflow.com/questions/14326012/how-to-get-a-username-from-asplogin-to-store-in-a-session
+    //Topic 3a: WEb app security Slide number 26
+    //http://www.daveoncsharp.com/2009/08/creating-an-asp-net-login-screen/
+
     public partial class Login : Page
     {
         protected void Page_Load(object sender, EventArgs e)

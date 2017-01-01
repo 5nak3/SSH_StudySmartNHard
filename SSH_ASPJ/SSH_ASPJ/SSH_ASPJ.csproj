@@ -209,6 +209,7 @@
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\MentorRegistration.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\ProfilePage.aspx" />
     <Content Include="Account\RegistrationSelection.aspx" />
     <Content Include="Account\MenteeRegister.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
@@ -422,6 +423,13 @@
     </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ProfilePage.aspx.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ProfilePage.aspx.designer.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\RegistrationSelection.aspx.cs">
       <DependentUpon>RegistrationSelection.aspx</DependentUpon>
