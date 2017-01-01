@@ -1,0 +1,27 @@
+﻿body {
+}
+
+#post_content {
+	height: auto;
+	width: 75%;
+	padding-bottom: 0px;
+	float: left;
+    padding-top: 40px;
+    border:3px solid red;
+    padding-left:50px;
+}
+
+#other_content {
+	height: auto;
+	width: 25%;
+	margin-top: 100px;
+    padding-left: 20px;
+	float:right;
+    border:3px solid black;
+}
+.content	{
+	overflow: hidden;
+    width: 100%;
+    clear: both;
+}
+

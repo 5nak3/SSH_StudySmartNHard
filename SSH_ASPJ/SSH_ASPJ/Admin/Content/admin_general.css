@@ -1,0 +1,125 @@
+﻿.nav_admin {
+  text-align: left;
+  width: 234px;
+  list-style: none;
+  padding: 0px;
+  position: fixed;
+  -webkit-box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 2px 7px rgba(0, 0, 0, 0.15);
+  padding-top:0px;
+  float:left;
+}
+
+.nav_admin > li {
+  width:234px;
+  background: #FFFFFF;
+  display: block;
+  font-size: 14px;
+  padding: 15px 5px 15px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.nav_admin > li:hover {
+  background: #E6E6E6;
+  color: #1B75C4;
+}
+
+.nav_admin > li:nth-child(-n+3){
+  border-left: 4px solid #FFC50A;
+}
+
+.nav_admin > li:nth-child(-n+3):hover{
+  border-left: 4px solid #cc9e08;
+}
+
+.nav_admin > li:nth-child(n+4){
+  border-left: 4px solid #74BF44;
+}
+
+.nav_admin > li:nth-child(n+4):hover{
+  border-left: 4px solid #5d9936;
+}
+
+.nav_admin > li:nth-child(n+7) {
+  border-left: 4px solid #0097D1;
+}
+
+.nav_admin > li:nth-child(n+7):hover {
+  border-left: 4px solid #0079a7;
+}
+
+.arrow {
+  float: right;
+  padding: 0px 10px
+}
+
+.nav_admin > li > ul {
+  border: 1px solid #CCCCCC;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  left: 234px;
+  width: 300px;
+  min-height:200px;
+  padding: 10px 0px 20px 20px;
+  opacity: 0;
+  visibility: hidden;
+  background: #ffffff;
+}
+
+.nav_admin > li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity .5s ease-in-out;
+       -moz-transition: opacity .5s ease-in-out;
+        -ms-transition: opacity .5s ease-in-out;
+         -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+}
+
+.nav_admin > li > ul > li { 
+  position: relative;
+  width: 200px;
+  padding: 0;
+  display: inline-block;
+  margin-right: 20px;
+  color: #555;
+  cursor:default;
+  font-weight: 300;
+  vertical-align: top;
+}
+
+.nav_admin > li > ul > li > ul { 
+  list-style: none;
+  padding: 0px !important;
+  vertical-align: top;
+}
+
+.nav_admin > li > ul > li > ul > li { 
+  margin-bottom: 7px;
+}
+
+h4 {
+  margin: 7px 0px 12px;
+}
+
+hr {
+  width: 483px;
+  margin: 0px;
+  border: 0px;
+  height: 1px;
+  background: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.admin_content {
+    margin-top:50px;
+    margin-left:250px;
+    border: 1px solid black;
+    min-height:300px;
+    margin-bottom:30px;
+}
