@@ -5,23 +5,18 @@ using System.Web;
 using Microsoft.AspNet.SignalR;
 using System.Threading.Tasks;
 
-namespace Imagin
+namespace Imagin2
 {
     public class DrawDot : Hub
     {
-        //public void UpdateCanvas(int x, int y, string ink, int size)
-        //{
-        //    Clients.All.updateDot(x, y, ink, size);
-        //}
-
-        public void UpdateCanvas(int x, int y)
+        public Task Join(string roomCode)
         {
-            Clients.All.updateDot(x, y);
-        }
-        public void ClearCanvas()
-        {
-            Clients.All.clearCanvas();
+            return Groups.Add(Context.ConnectionId, roomCode);
         }
 
+        public void UpdateCanvas(string roomCode, int x, int y, string ink, int size)
+        {
+            Clients.Group(roomCode).updateDot(x, y, ink, size);
+        }
     }
 }
