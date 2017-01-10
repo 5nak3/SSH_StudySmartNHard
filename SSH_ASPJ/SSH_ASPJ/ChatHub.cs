@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace Imagin2
 {
-    public class DrawDot : Hub
+    public class ChatHub : Hub
     {
-        public Task Join(string roomCode)
+        public Task JoinRoom(string roomCode)
         {
             return Groups.Add(Context.ConnectionId, roomCode);
         }
 
-        public void UpdateCanvas(string roomCode, int x, int y, string ink, int size)
+        public void Send(string roomCode, string name, string message)
         {
-            Clients.Group(roomCode).updateDot(x, y, ink, size);
+            // Call the broadcastMessage method to update clients.
+            Clients.Group(roomCode).broadcastMessage(name, message);
         }
     }
 }
