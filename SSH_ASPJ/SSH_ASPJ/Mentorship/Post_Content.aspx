@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Post_Content.aspx.cs" Inherits="ASPJ.Post_Content" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="Content/post_content.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/post_content.css" rel="stylesheet" type="text/css" />
 
     <asp:Button ID="reply" runat="server" Text="Reply Topic" />
         <asp:Panel ID="content" runat="server" CssClass="content">

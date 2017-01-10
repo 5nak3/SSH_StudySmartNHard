@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Mentorship.aspx.cs" Inherits="ASPJ.Mentorship" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="Content/mentorship.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/mentorship.css" rel="stylesheet" type="text/css" />
     <style>
         .forumCell{
             border-bottom:1px solid #bbb;
