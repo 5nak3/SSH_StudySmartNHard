@@ -223,7 +223,6 @@
     <Content Include="Admin\Console_Login.aspx" />
     <Content Include="Admin\Content\admin_general.css" />
     <Content Include="Admin\View_Log.aspx" />
-    <Content Include="Boared.aspx" />
     <Content Include="BootStrap_Temp_Content\css\1-col-portfolio.css" />
     <Content Include="BootStrap_Temp_Content\css\bootstrap.css" />
     <Content Include="BootStrap_Temp_Content\css\bootstrap.min.css" />
@@ -534,10 +533,6 @@
     <Compile Include="BeforeLogin.Master.designer.cs">
       <DependentUpon>BeforeLogin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Boared.aspx.cs">
-      <DependentUpon>Boared.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -647,7 +642,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
   <ItemGroup>
