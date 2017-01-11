@@ -17,6 +17,7 @@ namespace SSH_ASPJ.Account
     {
         protected void CreateUser_Click(object sender, EventArgs e)
         {
+            //hello
             var userStore = new UserStore<IdentityUser>();
             var manager = new UserManager<IdentityUser>(userStore);
             Debug.WriteLine(manager);
