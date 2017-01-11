@@ -7,9 +7,9 @@
 
     <!-- Bootstrap Core CSS -->
     <title>Study Smart & Hard [SSH]</title>
-    <link href="BootStrap_Temp_Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="BootStrap_Temp_Content/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
-    <link href="BootStrap_Temp_Content/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <link href="BootStrap_Temp_Content/css/jquery.smartmenus.bootstrap.css" rel="stylesheet"/>
     <link href="BootStrap_Temp_Content/css/owl/owl.carousel.css" rel="stylesheet" type="text/css" />
     <link href="BootStrap_Temp_Content/css/owl/owl.theme.css" rel="stylesheet" type="text/css" />
     <link href="BootStrap_Temp_Content/css/owl/owl.transitions.css" rel="stylesheet" type="text/css" />
@@ -20,7 +20,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700"
         rel="stylesheet" type="text/css" />
     <!-- Required plugin - Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"/>
     <link href="BootStrap_Temp_Content/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

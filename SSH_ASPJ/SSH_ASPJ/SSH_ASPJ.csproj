@@ -280,6 +280,7 @@
     <Content Include="Images\introductions_800_clr_10909-1.png" />
     <Content Include="Images\user_mentee_med.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="PwdMgr\Pwdmgr_App.aspx" />
     <Content Include="References\LogParser.dll" />
     <Content Include="Mentorship.aspx" />
     <Content Include="Ment_Post.aspx" />
@@ -536,7 +537,6 @@
     </Compile>
     <Compile Include="Boared.aspx.cs">
       <DependentUpon>Boared.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -598,6 +598,13 @@
       <DependentUpon>Post_Content.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PwdMgr\Pwdmgr_App.aspx.cs">
+      <DependentUpon>Pwdmgr_App.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PwdMgr\Pwdmgr_App.aspx.designer.cs">
+      <DependentUpon>Pwdmgr_App.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Relation.cs" />
     <Compile Include="RelationPost.cs" />
     <Compile Include="RelationPostContent.cs" />
