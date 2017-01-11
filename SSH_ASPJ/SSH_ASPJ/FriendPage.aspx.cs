@@ -15,7 +15,7 @@ namespace ASPJ
     {
         List<Button> bList = new List<Button>();
         List<string> requests = new List<string>();
-        string user = "ITstudent1";
+        string user = "BusinessMentor1";
         protected void Page_Load(object sender, EventArgs e)
         {
             getFriendRequest();

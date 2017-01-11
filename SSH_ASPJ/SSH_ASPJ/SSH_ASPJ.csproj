@@ -217,13 +217,12 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Add_Mentor.aspx" />
+    <Content Include="Mentorship\Add_Mentor.aspx" />
     <Content Include="Admin\Change_Key.aspx" />
     <Content Include="Admin\Console.aspx" />
     <Content Include="Admin\Console_Login.aspx" />
     <Content Include="Admin\Content\admin_general.css" />
     <Content Include="Admin\View_Log.aspx" />
-    <Content Include="Boared.aspx" />
     <Content Include="BootStrap_Temp_Content\css\1-col-portfolio.css" />
     <Content Include="BootStrap_Temp_Content\css\bootstrap.css" />
     <Content Include="BootStrap_Temp_Content\css\bootstrap.min.css" />
@@ -282,9 +281,9 @@
     <Content Include="index.aspx" />
     <Content Include="PwdMgr\Pwdmgr_App.aspx" />
     <Content Include="References\LogParser.dll" />
-    <Content Include="Mentorship.aspx" />
-    <Content Include="Ment_Post.aspx" />
-    <Content Include="Post_Content.aspx" />
+    <Content Include="Mentorship\Mentorship.aspx" />
+    <Content Include="Mentorship\Ment_Post.aspx" />
+    <Content Include="Mentorship\Post_Content.aspx" />
     <Content Include="Scripts\ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -481,11 +480,11 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Add_Mentor.aspx.cs">
+    <Compile Include="Mentorship\Add_Mentor.aspx.cs">
       <DependentUpon>Add_Mentor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Add_Mentor.aspx.designer.cs">
+    <Compile Include="Mentorship\Add_Mentor.aspx.designer.cs">
       <DependentUpon>Add_Mentor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Change_Key.aspx.cs">
@@ -537,6 +536,7 @@
     </Compile>
     <Compile Include="Boared.aspx.cs">
       <DependentUpon>Boared.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -571,18 +571,18 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logger.cs" />
-    <Compile Include="Mentorship.aspx.cs">
+    <Compile Include="Mentorship\Mentorship.aspx.cs">
       <DependentUpon>Mentorship.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Mentorship.aspx.designer.cs">
+    <Compile Include="Mentorship\Mentorship.aspx.designer.cs">
       <DependentUpon>Mentorship.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Ment_Post.aspx.cs">
+    <Compile Include="Mentorship\Ment_Post.aspx.cs">
       <DependentUpon>Ment_Post.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Ment_Post.aspx.designer.cs">
+    <Compile Include="Mentorship\Ment_Post.aspx.designer.cs">
       <DependentUpon>Ment_Post.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
@@ -590,21 +590,14 @@
     <Compile Include="Notification.cs" />
     <Compile Include="NotificationComponent.cs" />
     <Compile Include="NotificationHub.cs" />
-    <Compile Include="Post_Content.aspx.cs">
+    <Compile Include="Mentorship\Post_Content.aspx.cs">
       <DependentUpon>Post_Content.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Post_Content.aspx.designer.cs">
+    <Compile Include="Mentorship\Post_Content.aspx.designer.cs">
       <DependentUpon>Post_Content.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PwdMgr\Pwdmgr_App.aspx.cs">
-      <DependentUpon>Pwdmgr_App.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PwdMgr\Pwdmgr_App.aspx.designer.cs">
-      <DependentUpon>Pwdmgr_App.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Relation.cs" />
     <Compile Include="RelationPost.cs" />
     <Compile Include="RelationPostContent.cs" />
@@ -658,7 +651,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\openssl-net-master\ManagedOpenSsl\ManagedOpenSsl.csproj">
+    <ProjectReference Include="..\..\openssl-net-master\ManagedOpenSsl\ManagedOpenSsl.csproj">
       <Project>{73dcc218-655b-485f-8eac-0ce5f2f7343d}</Project>
       <Name>ManagedOpenSsl</Name>
     </ProjectReference>

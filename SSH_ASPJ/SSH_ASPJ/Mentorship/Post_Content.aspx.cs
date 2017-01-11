@@ -83,7 +83,7 @@ namespace ASPJ
             if (success != 0)
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Successfully reply topic'); window.location='" +
-                    "/Mentorship.aspx';", true);
+                    "/Mentorship/Mentorship.aspx';", true);
             }
         }
     }
