@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security.Cookies;
 
 [assembly: OwinStartup(typeof(ASPJ.Startup))]
 
@@ -17,6 +19,15 @@ namespace ASPJ
 
             GlobalHost.DependencyResolver.Register(typeof(IUserIdProvider), () => idProvider);
             app.MapSignalR();
+
+
+
+            //WanQing's
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+                LoginPath = new PathString("/index")
+            });
         }
     }
 }

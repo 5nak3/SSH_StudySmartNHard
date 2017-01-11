@@ -8,6 +8,7 @@ using System.Web.UI;
 using SSH_ASPJ;
 using System.Diagnostics;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 
 namespace SSH_ASPJ.Account
 {
@@ -20,7 +21,7 @@ namespace SSH_ASPJ.Account
             var manager = new UserManager<IdentityUser>(userStore);
             Debug.WriteLine(manager);
             //var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = Username.Text, Email = Email.Text };
+            var user = new IdentityUser() { UserName = Username.Text, Email = Email.Text };
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
             {
@@ -29,8 +30,13 @@ namespace SSH_ASPJ.Account
                 //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
                 //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
-               // signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                // manager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+                Response.Redirect("~/index.aspx");
             }
             else
             {
