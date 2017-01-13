@@ -2,6 +2,8 @@
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Web;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 
 namespace SSH_ASPJ.Account
 {
@@ -28,7 +30,7 @@ namespace SSH_ASPJ.Account
 
         protected void Page_Load()
         {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var manager = Context.GetOwinContext().GetUserManager<IdentityManager>();
 
             HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
 

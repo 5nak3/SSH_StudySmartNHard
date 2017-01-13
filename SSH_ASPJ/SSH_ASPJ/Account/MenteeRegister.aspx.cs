@@ -17,10 +17,10 @@ namespace SSH_ASPJ.Account
     {
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            //hello
+            
             var userStore = new UserStore<IdentityUser>();
             var manager = new UserManager<IdentityUser>(userStore);
-            Debug.WriteLine(manager);
+           // Debug.WriteLine(manager);
             //var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new IdentityUser() { UserName = Username.Text, Email = Email.Text };
             IdentityResult result = manager.Create(user, Password.Text);
