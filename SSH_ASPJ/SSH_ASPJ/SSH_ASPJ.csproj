@@ -651,7 +651,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\openssl-net-master\ManagedOpenSsl\ManagedOpenSsl.csproj">
+    <ProjectReference Include="..\..\..\..\openssl-net-master\ManagedOpenSsl\ManagedOpenSsl.csproj">
       <Project>{73dcc218-655b-485f-8eac-0ce5f2f7343d}</Project>
       <Name>ManagedOpenSsl</Name>
     </ProjectReference>
