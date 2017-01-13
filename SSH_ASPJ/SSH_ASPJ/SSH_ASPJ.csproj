@@ -298,9 +298,9 @@
     <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="BootStrap_Temp_Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="WebForm2.aspx" />
     <Content Include="Logs\access.log" />
     <Content Include="Logs\auth.log" />
-    <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -533,10 +533,6 @@
     </Compile>
     <Compile Include="BeforeLogin.Master.designer.cs">
       <DependentUpon>BeforeLogin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Boared.aspx.cs">
-      <DependentUpon>Boared.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
