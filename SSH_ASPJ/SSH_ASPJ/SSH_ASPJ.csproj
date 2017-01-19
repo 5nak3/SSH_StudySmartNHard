@@ -676,12 +676,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\openssl-net-master\ManagedOpenSsl\ManagedOpenSsl.csproj">
-      <Project>{73dcc218-655b-485f-8eac-0ce5f2f7343d}</Project>
-      <Name>ManagedOpenSsl</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
