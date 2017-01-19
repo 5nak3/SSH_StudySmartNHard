@@ -4,6 +4,7 @@ using System;
 using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+using SSH_ASPJ.Models;
 
 namespace SSH_ASPJ.Account
 {
@@ -30,31 +31,46 @@ namespace SSH_ASPJ.Account
 
         protected void Page_Load()
         {
-            var manager = Context.GetOwinContext().GetUserManager<IdentityManager>();
+            //var manager = Context.GetOwinContext().GetUserManager<IdentityManager>();
 
-            HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
+            //HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
 
-            // Enable this after setting up two-factor authentientication
-            //PhoneNumber.Text = manager.GetPhoneNumber(User.Identity.GetUserId()) ?? String.Empty;
+            //// Enable this after setting up two-factor authentientication
+            ////PhoneNumber.Text = manager.GetPhoneNumber(User.Identity.GetUserId()) ?? String.Empty;
 
-            TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId());
+            //TwoFactorEnabled = manager.GetTwoFactorEnabled(User.Identity.GetUserId());
 
-            LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count;
+            //LoginsCount = manager.GetLogins(User.Identity.GetUserId()).Count;
 
-            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            //var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+
+            //if (!IsPostBack)
+            //{
+            //    // Determine the sections to render
+            //    if (HasPassword(manager))
+            //    {
+            //        ChangePassword.Visible = true;
+            //    }
+            //    else
+            //    {
+            //        CreatePassword.Visible = true;
+            //        ChangePassword.Visible = false;
+            //    }
+
+
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var currentUser = manager.FindById(Context.User.Identity.GetUserId());
+            string userpass = currentUser.PasswordHash;
+            string userPhone = currentUser.PhoneNumber;
+
 
             if (!IsPostBack)
             {
                 // Determine the sections to render
-                if (HasPassword(manager))
-                {
-                    ChangePassword.Visible = true;
-                }
-                else
-                {
-                    CreatePassword.Visible = true;
-                    ChangePassword.Visible = false;
-                }
+
+
+                ChangePassword.Visible = true;
+            
 
                 // Render success message
                 var message = Request.QueryString["m"];

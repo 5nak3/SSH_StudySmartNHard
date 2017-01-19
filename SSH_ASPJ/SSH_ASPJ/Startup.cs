@@ -5,6 +5,7 @@ using Owin;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security.Cookies;
+using SSH_ASPJ;
 
 [assembly: OwinStartup(typeof(ASPJ.Startup))]
 
@@ -28,6 +29,9 @@ namespace ASPJ
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/index")
             });
+
+           // app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
+
         }
     }
 }

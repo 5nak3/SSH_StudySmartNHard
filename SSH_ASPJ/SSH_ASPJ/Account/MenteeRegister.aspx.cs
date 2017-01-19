@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
+using SSH_ASPJ;
 using SSH_ASPJ.Models;
 using System;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using SSH_ASPJ;
-using System.Diagnostics;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Owin.Security;
 
 namespace SSH_ASPJ.Account
 {
@@ -17,31 +18,78 @@ namespace SSH_ASPJ.Account
     {
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            
-            var userStore = new UserStore<IdentityUser>();
-            var manager = new UserManager<IdentityUser>(userStore);
-           // Debug.WriteLine(manager);
-            //var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new IdentityUser() { UserName = Username.Text, Email = Email.Text };
-            IdentityResult result = manager.Create(user, Password.Text);
-            if (result.Succeeded)
+            if (textPassword.Visible == true)
             {
-                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                //string code = manager.GenerateEmailConfirmationToken(user.Id);
-                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
-                //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
+                //var userStore = new UserStore<IdentityUser>();
+                //var manager = new UserManager<IdentityUser>(userStore);
+                //// Debug.WriteLine(manager);
+                ////var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+                //var user = new IdentityUser() { UserName = Username.Text, Email = Email.Text };
+                //IdentityResult result = manager.Create(user, Password.Text);
 
-                // manager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                var user = new ApplicationUser() { UserName = Username.Text, Email = Email.Text };
 
-                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-                var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
-                authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
-                Response.Redirect("~/index.aspx");
+                IdentityResult result = manager.Create(user, Password.Text);
+
+                if (result.Succeeded)
+                {
+                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                    //string code = manager.GenerateEmailConfirmationToken(user.Id);
+                    //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
+                    //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
+
+                    // manager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                    //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+
+                    var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                    var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                    authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+                    Response.Redirect("~/Default.aspx");
+                }
+                else
+                {
+                    ErrorMessage.Text = result.Errors.FirstOrDefault();
+                }
             }
-            else
+            else if (imagePassword.Visible == true)
             {
-                ErrorMessage.Text = result.Errors.FirstOrDefault();
+                string fileExt = Path.GetExtension(imagePasswordControl.PostedFile.FileName);
+                if (fileExt == ".jpg")
+                {
+                    // string filename = Path.GetFileName(imagePasswordControl.FileName);
+                    byte[] imgbyte = imagePasswordControl.FileBytes;
+                    //convert byte[] to Base64 string
+                    string base64ImgString = Convert.ToBase64String(imgbyte);
+
+                    var userStore = new UserStore<IdentityUser>();
+                    var manager = new UserManager<IdentityUser>(userStore);
+                    var user = new IdentityUser() { UserName = Username.Text, Email = Email.Text };
+                    IdentityResult result = manager.Create(user, base64ImgString);
+
+                    if (result.Succeeded)
+                    {
+                        //    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                        //string code = manager.GenerateEmailConfirmationToken(user.Id);
+                        //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
+                        //    //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
+
+                        //Configurating the Email Body using Created HTML Template
+                        //string body = this.PopulateBody(user.UserName, callbackUrl);
+
+                        var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                        var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                        authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+                        Response.Redirect("~/Default.aspx");
+                        //manager.SendEmail(user.Id, "Confirm your account", body);
+                        //Response.Redirect("/Account/NewAccountCheckEmail");
+                        //IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                    }
+                }
+                else
+                {
+                    ErrorMessage.Text = "Upload Status: Only JPEG files are available for upload";
+                }
             }
         }
 

@@ -66,6 +66,7 @@
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                             <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
+                            <asp:Button runat="server" ID="ResendConfirm" OnClick="SendEmailConfirmationToken" Text="Resend confirmation" Visible="false" CssClass="'btn btn-default" />
                         </div>
                     </div>
                 </div>
@@ -73,9 +74,9 @@
                     <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Enabled">Register as a new user</asp:HyperLink>
                 </p>
                 <p>
-                    <%-- Enable this once you have account confirmation enabled for password reset functionality
+                     <%--Enable this once you have account confirmation enabled for password reset functionality--%>
                     <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>
-                    --%>
+                    
                 </p>
             </section>
         </div>
