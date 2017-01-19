@@ -1,0 +1,16 @@
+﻿body {
+}
+header1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:red;
+}
+.table{
+    font-family:'Comic Sans MS';
+    color:black;
+}
+p.thepost{
+    border-style:solid;
+    border-color:red;
+    border-width:5px;
+
+}
