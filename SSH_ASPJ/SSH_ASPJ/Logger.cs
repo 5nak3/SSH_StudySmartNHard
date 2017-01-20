@@ -9,7 +9,7 @@ namespace ASPJ
 {
     public class Logger
     {
-        private static readonly string currentDir= "C:\\Users\\Guangyao\\Source\\Repos\\SSH_StudySmartNHard\\SSH_ASPJ\\SSH_ASPJ";
+        private static readonly string currentDir= "C:\\Users\\Guangyao\\Source\\Repos\\SSH_StudySmartNHard\\SSH_StudySmartNHard\\SSH_ASPJ\\SSH_ASPJ";
         static readonly string[] logList = {"access.log","auth.log" };
         public string cmd { get; set; }
         public Logger(string cmd)

@@ -19,14 +19,13 @@
             background-color: hsl(195, 73%, 58%);
             padding-top: 25px;
             padding-left: 5px;
-            width: 90%;
+            width: 95%;
             border-radius: 5px 5px 0px 0px;
             color:white;
         }
         .forum{
-            width: 90%;
+            width: 95%;
         }
-
     </style>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -43,9 +42,11 @@
             <asp:Table ID="forum" runat="server" CssClass="forum"></asp:Table>
 		</div>
 		<div id="other_content">
-            
-                <asp:Panel ID="mentPanel" runat="server"></asp:Panel>
-                <asp:Panel ID="findMent" runat="server"></asp:Panel>
+            <asp:Panel  runat="server" ID="mentHeader" CssClass="mentHeader"></asp:Panel>
+                <asp:Panel ID="mentPanel" runat="server" CssClass="mentPan"></asp:Panel>
+            <br />
+            <asp:Panel  runat="server" ID="findHeader" CssClass="mentHeader"></asp:Panel>
+                <asp:Panel ID="findMent" runat="server" CssClass="findPan"></asp:Panel>
 		</div>
 </div>
 

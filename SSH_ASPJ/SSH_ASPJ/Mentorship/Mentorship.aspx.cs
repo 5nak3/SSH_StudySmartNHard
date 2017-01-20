@@ -19,7 +19,7 @@ namespace ASPJ
         List<RelationPost> rList;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.QueryString["userID"] != null)
+            if (Request.QueryString["userID"] != null)
             {
                 userID = Request.QueryString["userID"];
             }
@@ -29,9 +29,9 @@ namespace ASPJ
                 l.Text = "Your Mentors";
                 BulletedList lList = new BulletedList();
                 getMentor(lList);
-                
 
-                mentPanel.Controls.Add(l);
+
+                mentHeader.Controls.Add(l);
                 mentPanel.Controls.Add(lList);
 
                 Label l1 = new Label();
@@ -45,21 +45,30 @@ namespace ASPJ
 
 
             }
-            else if (checkUserMode(userID) == 2){
+            else if (checkUserMode(userID) == 2)
+            {
                 Label l = new Label(); ;
                 l.Text = "Your Mentees";
 
                 BulletedList lList = new BulletedList();
                 getMentee(lList);
 
-                mentPanel.Controls.Add(l);
+                mentHeader.Controls.Add(l);
                 mentPanel.Controls.Add(lList);
 
                 getMenteeRequest();
 
             }
+            Button c = new Button();
+            c.Text = "Start A Topic";
+            c.Click += startTopic;
+            mentPanel.Controls.Add(c);
             getRelationPost();
-            Logger.accessLogging(DateTime.Now+","+userID+",Mentorship.aspx");
+            Logger.accessLogging(DateTime.Now + "," + userID + ",Mentorship.aspx");
+        }
+        public void startTopic(object sender, EventArgs e)
+        {
+            Response.Redirect("Ment_Post");
         }
 
         public void getMentor(BulletedList list)
@@ -158,12 +167,12 @@ namespace ASPJ
         {
             TableHeaderRow header = new TableHeaderRow();
             TableHeaderCell headerCell;
-            string[] texts = {"Title ","Posts", "Posted By"};
+            string[] texts = { "Title ", "Posts", "Posted By" };
             for (int i = 0; i < texts.Length; i++)
             {
                 headerCell = new TableHeaderCell();
                 headerCell.Text = texts[i];
-                headerCell.CssClass ="forumHeader";
+                headerCell.CssClass = "forumHeader";
                 header.Cells.Add(headerCell);
 
                 if (i == 0)
@@ -175,7 +184,7 @@ namespace ASPJ
             forum.Rows.Add(header);
 
             rList = RelationPost.getRelationPost(userID);
-            for(int i=0;i<rList.Count;i++)
+            for (int i = 0; i < rList.Count; i++)
             {
                 TableRow row = new TableRow();
                 TableCell cell = new TableCell();
@@ -189,7 +198,7 @@ namespace ASPJ
                 row.Cells.Add(cell);
 
                 cell = new TableCell();
-                cell.Text = ""+ 1234;
+                cell.Text = "" + RelationPostContent.retrieveNumOfPost(rList[i].postID);
                 cell.CssClass = "forumCell";
                 row.Cells.Add(cell);
 
@@ -200,7 +209,7 @@ namespace ASPJ
 
 
                 forum.Rows.Add(row);
-            } 
+            }
         }
     }
 }

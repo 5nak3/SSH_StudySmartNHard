@@ -27,6 +27,33 @@ namespace ASPJ
             this.postBody = postBody;
             this.postedBy = postedBy;
         }
+        public static int retrieveNumOfPost(int postID)
+        {
+            int count = 0;
+            SqlConnection myConnection = new SqlConnection();
+            myConnection.ConnectionString = System.Configuration.ConfigurationManager.
+    ConnectionStrings["myConnection"].ConnectionString;
+            try
+            {
+                myConnection.Open();
+                SqlDataReader myReader = null;
+                SqlCommand command = new SqlCommand("getRelationContent ", myConnection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("postID", postID));
+                myReader = command.ExecuteReader();
+
+                while (myReader.Read())
+                {
+                    count++;
+                }
+            }
+            catch (Exception e1)
+            {
+                Console.WriteLine(e1.ToString());
+            }
+            return count;
+        }
+
         public static List<RelationPostContent> getRelationContent(int postID)
         {
             List<RelationPostContent> pList = new List<RelationPostContent>();

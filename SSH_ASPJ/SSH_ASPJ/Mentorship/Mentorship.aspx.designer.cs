@@ -22,6 +22,15 @@ namespace ASPJ {
         protected global::System.Web.UI.WebControls.Table forum;
         
         /// <summary>
+        /// mentHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel mentHeader;
+        
+        /// <summary>
         /// mentPanel control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace ASPJ {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel mentPanel;
+        
+        /// <summary>
+        /// findHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel findHeader;
         
         /// <summary>
         /// findMent control.
